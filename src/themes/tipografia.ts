@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-const tipografia = StyleSheet.create({
+const Tipografia = StyleSheet.create({
     title: {
         fontSize:24,
         fontFamily: 'Nunito',
@@ -29,12 +29,9 @@ const tipografia = StyleSheet.create({
         fontFamily: 'inter',
         fontWeight:'normal',
         marginVertical: 1.6
-    },
-    primary: {
-
     }
 
 }
 );
 
-export default tipografia;
+export default Tipografia;

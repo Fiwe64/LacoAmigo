@@ -5,8 +5,7 @@ import Lembrete from './src/components/lembreteContainer'
 export default function App() {
   return (
     <View style={styles.container}>
-      <Lembrete titulo='Teste'/>
-      <Lembrete titulo='Fazer Tarefa'/>
+      <Lembrete titulo='Teste' type='amigo' nomeAmigo='Claudio'/>
       <Lembrete titulo='Fazer Tarefa'/>
     </View>
   );
@@ -15,9 +14,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor : '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    marginBottom:20
+    marginBottom:20,
+    paddingLeft:5,
+    paddingTop:10
   }
 });

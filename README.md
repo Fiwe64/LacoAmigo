@@ -7,7 +7,8 @@ um projeto pessoal meu focado em aplicar meus conhecimentos em react native.
 
 > [!Links]
 > github: https://github.com/Fiwe64/LacoAmigo
-> Protótipo no FIgma: https://www.figma.com/proto/k2Mv8NaBEjCCDuuojnoXqX/Relembre-me--App-de-Lembretes-R%C3%A1pidos?node-id=0-1&t=bLXnCYHPlxQFU0hQ-1
+>
+> Protótipo no FIgma: https://www.figma.com/proto/k2Mv8NaBEjCCDuuojnoXqX/Relembre-me--App-de-Lembretes-R%C3%A1pidos?node-id=1-2&t=bLXnCYHPlxQFU0hQ-1
 
 
 ## Objetivo

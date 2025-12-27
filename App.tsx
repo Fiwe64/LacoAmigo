@@ -1,24 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet,View } from 'react-native';
 import Lembrete from './src/components/lembreteContainer'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Lembrete titulo='Teste' type='amigo' nomeAmigo='Claudio'/>
-      <Lembrete titulo='Fazer Tarefa'/>
+      <Lembrete titulo='Preencher Questionário' type='amigo' nomeAmigo='Claudio' urgencyType='commom'/>
+      <Lembrete titulo='Fazer Tarefa' urgencyType='urgent'/>
+      <Lembrete titulo='Responder Amigo querido' urgencyType='important'/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex:1,
     backgroundColor : '#fff',
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom:20,
-    paddingLeft:5,
+    paddingLeft:10,
+    paddingRight:10,
     paddingTop:10
   }
 });

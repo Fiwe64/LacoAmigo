@@ -13,6 +13,23 @@ export const style = StyleSheet.create({
     paddingHorizontal: 15,
     paddingVertical: 10, 
     marginBottom: 10,
+
+
+    //sombra
+
+    //sombra
+
+    // SOMBRA PARA ANDROID
+    elevation: 5,
+
+    
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2, // Desloca a sombra para baixo
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
   },
   commomBackground:{
     backgroundColor:colors.commom

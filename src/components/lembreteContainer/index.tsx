@@ -43,6 +43,7 @@ function CardLembrete({ titulo, nomeAmigo, type, urgencyType }: LembreteProps) {
           </View>
         )}
       </View>
+      <Image source={require("./pencil.png")} />
     </View>
   );
 }

@@ -1,24 +1,26 @@
 import { StyleSheet, View } from "react-native";
-import Lembrete from "./src/components/lembreteContainer";
+import Lembrete from "./src/components/lembrete";
 import BottomMenu from "./src/components/BottomMenu";
+import TopMenu from "./src/components/TopMenu";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Lembrete titulo="Teste" urgencyType="commom"/>
-      <Lembrete titulo="Teste" urgencyType="important"/>
-      <Lembrete titulo="Teste" urgencyType="urgent"/>
-    <BottomMenu/>
+      <TopMenu />
+      <Lembrete titulo="Marcar um Médico" urgencyType="commom" />
+      <Lembrete titulo="Marcar um Médico" urgencyType="commom" />
+      <BottomMenu/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex:1,
+    flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center",
-    paddingTop:150,
-  }
+
+    justifyContent: "flex-start",
+    paddingTop: 60,
+  },
 });

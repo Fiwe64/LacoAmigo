@@ -36,7 +36,7 @@ const style = StyleSheet.create({
   // Container das Abas (Tabs)
   tabsContainer: {
     flexDirection: "row",
-    
+
     alignItems: 'center'
   },
 

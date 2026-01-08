@@ -5,7 +5,10 @@ import Tipografia from "../../themes/tipografia";
 export const style = StyleSheet.create({
     bottomMenuContainer:{
         width:"100%",
-        flexDirection: "column"
+        height:"100%",
+        flexDirection: "column",
+        backgroundColor:colors.primary,
+      
     },
   iconContainer: {
    // width: "100%",

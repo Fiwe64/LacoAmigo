@@ -2,66 +2,70 @@ import colors from "../../themes/colors";
 import { StyleSheet } from "react-native";
 
 export const style = StyleSheet.create({
-  lembreteContainer: {
-    width:"100%",
-    height:64,
-    flexDirection: "row", 
-    alignItems: "center", 
-    gap: 10,
+  container: {
+    width: "100%",
     borderRadius: 24,
-    overflow: "hidden",
-    paddingHorizontal: 15,
-    paddingVertical: 10, 
-    marginBottom: 10,
-
-
-    //sombra
-
-    //sombra
-
-    // SOMBRA PARA ANDROID
-    elevation: 5,
-
-    
+    flexDirection: "row",
+     backgroundColor: "white",
+    alignItems: "stretch", //faz os filhos terem a mesma altura.
+    overflow: "hidden", // ← isso faz o container recortar os filhos
+   // sombra
     shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2, // Desloca a sombra para baixo
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+
+   
   },
-  commomBackground:{
-    backgroundColor:colors.commom
+  urgencyColor: {
+    width: 25,
   },
-  urgentBackground:{
-    backgroundColor:colors.urgent
-  },
-  importantBackground:{
-    backgroundColor:colors.important
-  },
-  informacoesLembrete: {
-    width:285,
-    height:54, 
+  informationBox: {
+    flex: 1,
+    flexDirection: "column",
     justifyContent: "center",
-    gap:5,
-    paddingHorizontal:10,
-    paddingVertical:10,
-    paddingBottom:10,
-    
+    gap: 4,
+    paddingHorizontal: 10,
+    paddingVertical: 15,
   },
-  containerTitulo: {
-    flex:1,
-    alignItems: "flex-start",
-    
+  titulo:{
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#263238",
   },
-  containerLegenda: {
-    marginTop: 1,
+  descricao:{
+    fontSize: 13,
+    color: "#263238",
   },
-  textoTituloCor: {
-    color: colors.background 
+  timeInformationBox: {
+    alignItems: "flex-end",
+    justifyContent: "center",
+    paddingHorizontal: 10,
+    gap: 4,
   },
-  textoLegendaCor: {
-    color: colors.background, 
-  }
+  dataLabel:{
+    fontSize: 12,
+    color: "#263238",
+  },
+  badge:{
+    backgroundColor: "#FF6B6B",
+    borderRadius: 12,
+    paddingHorizontal: 10,
+    paddingVertical: 3,
+  },
+  badgeText: {
+    color: "white",
+    fontSize: 12,
+    fontWeight: "bold",
+  },
+  botao: {
+    justifyContent: "center",
+    paddingHorizontal: 10,
+  },
+  botaoText: {
+    fontSize: 18,
+    color: "#263238",
+    letterSpacing: 2,
+  },
 });

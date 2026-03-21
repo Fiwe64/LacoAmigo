@@ -1,6 +1,6 @@
 import { View, Text } from "react-native";
 import React from "react";
-import CardLembrete from "../../components/lembrete/index";
+import Lembrete from "../../components/lembrete/index";
 import TopMenu from "../../components/TopMenu";
 import BottomMenu from "../../components/BottomMenu";
 import style from "./style";
@@ -11,7 +11,9 @@ const HomeScreen = () => {
       <View style={style.header}>
         <TopMenu/>
       </View>
-      <View style={style.body}></View>
+      <View style={style.body}>
+        <Lembrete titulo="Teste" descricao="Testeeeee" urgency={1} date="hoje"/>
+      </View>
       <View style={style.footer}>
         <BottomMenu/>
       </View>

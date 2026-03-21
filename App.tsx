@@ -3,29 +3,14 @@ import Lembrete from "./src/components/lembrete";
 import BottomMenu from "./src/components/BottomMenu";
 import TopMenu from "./src/components/TopMenu";
 import HomeScreen from "./src/screens/HomeScreen/HomeScreen";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { StatusBar } from "expo-status-bar";
 
 export default function App() {
   return (
-    /*
-    <View style={styles.container}>
-      <TopMenu />
-      <Lembrete titulo="Marcar um Médico" urgencyType="commom" />
-      <Lembrete titulo="Marcar um Médico" urgencyType="commom" />
-      <BottomMenu/>
-    </View>
-    */
-
-    <HomeScreen/>
+    <SafeAreaProvider>
+      <StatusBar style="auto"/>
+      <HomeScreen />
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-
-    justifyContent: "flex-start",
-    paddingTop: 60,
-  },
-});

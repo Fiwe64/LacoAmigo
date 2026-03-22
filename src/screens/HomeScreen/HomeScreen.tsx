@@ -13,6 +13,7 @@ const HomeScreen = () => {
       </View>
       <View style={style.body}>
         <Lembrete titulo="Teste" descricao="Testeeeee" urgency={1} date="hoje"/>
+        <Lembrete titulo="Teste" descricao="Testeeeee" urgency={1} date="hoje"/>
       </View>
       <View style={style.footer}>
         <BottomMenu/>

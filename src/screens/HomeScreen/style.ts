@@ -9,7 +9,8 @@ const style = StyleSheet.create({
 
     },
     body:{
-        height:"72%"
+        height:"72%",
+        gap: 10,
     },
     footer:{
         flex:1,

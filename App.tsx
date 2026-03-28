@@ -11,6 +11,7 @@ export default function App() {
     <SafeAreaProvider>
       <StatusBar style="auto"/>
       <HomeScreen />
+      
     </SafeAreaProvider>
   );
 }

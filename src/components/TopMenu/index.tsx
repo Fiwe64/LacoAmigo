@@ -2,8 +2,13 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 import style from "./style";
 import { MaterialIcons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+
 
 const TopMenu = () => {
+  
+  const navigation = useNavigation<any>();
+  
   return (
     <View style={style.container}>
       {/* 1. Parte de Cima: Título e Menu Icone */}

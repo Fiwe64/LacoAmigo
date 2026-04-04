@@ -1,13 +1,14 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, TouchableOpacity, Touchable } from "react-native";
 import React from "react";
 import style from "./style";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 
 
-const TopMenu = () => {
+const TopMenu = ({state, navigation}: BottomTabBarProps) => {
   
-  const navigation = useNavigation<any>();
+  if (!state) return null;
   
   return (
     <View style={style.container}>
@@ -21,14 +22,14 @@ const TopMenu = () => {
       </View>
 
       <View style={style.tabsContainer}>
-        <View style={style.tabButtonActive}>
+        <TouchableOpacity style={style.tabButtonActive} onPress={() => navigation.navigate("HomeScreen")}>
           <MaterialIcons name="person" size={20} color="#fff" />
-          <Text style={style.tabTextActive}>Meus Lembretes</Text>
-        </View>
-        <View style={style.tabButtonInactive}>
+          <Text style={state.index === 0 ? style.tabTextActive : {}}>Meus Lembretes</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={style.tabButtonInactive} onPress={() => navigation.navigate("FriendScreen")}>
           <MaterialIcons name="person" size={20} color="#1E1E1E" />
-          <Text >Meus Lembretes</Text>
-        </View>
+          <Text style={state.index === 1 ? style.tabTextActive : {}}>Amigos</Text>
+        </TouchableOpacity>
       </View>
       
     </View>

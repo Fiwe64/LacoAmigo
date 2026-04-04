@@ -15,9 +15,9 @@ const HomeScreen = () => {
         <Lembrete titulo="Teste" descricao="Testeeeee" urgency={1} date="hoje"/>
         <Lembrete titulo="Teste" descricao="Testeeeee" urgency={1} date="hoje"/>
       </View>
-      <View style={style.footer}>
+      {/* <View style={style.footer}>
         <BottomMenu/>
-      </View>
+      </View> */}
     </View>
   );
 };

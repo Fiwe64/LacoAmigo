@@ -19,36 +19,24 @@ function BottomMenu({ state, navigation }: BottomTabBarProps) {
           <View
             style={[
               style.selectedIconBackground,
-              { backgroundColor: isHome ? colors.primary : colors.secundary },
+              { backgroundColor: !isHome ? colors.primary : colors.secundary },
             ]}
           >
-            <View
-              style={[
-                style.selectedIconBackground,
-                { backgroundColor: colors.secundary },
-              ]}
-            >
-              <MaterialIcons name="list" size={32} color="#fff" />
-            </View>
+            <MaterialIcons name="list" size={32} color="#fff" />
+           
             <Text style={style.colorText}>Lembretes</Text>
           </View>
         </TouchableOpacity>
         {/** Botão de Adicionar */}
-        <View style={style.addIconFrame}>
+        <TouchableOpacity style={style.addIconFrame}>
           <MaterialIcons name="add" size={32} color="#fff" />
-        </View>
+        </TouchableOpacity>
         {/** Botão de Pomodoro */}
 
         <TouchableOpacity style={style.iconFrame} onPress={() => navigation.navigate("Pomodoro")}>
-          <View style={[style.selectedIconBackground, { backgroundColor: !isHome ? colors.primary : colors.secundary }]}>
-            <View
-              style={[
-                style.selectedIconBackground,
-                { backgroundColor: colors.primary },
-              ]}
-            >
-              <MaterialIcons name="alarm" size={32} color="#fff" />
-            </View>
+          <View style={[style.selectedIconBackground, { backgroundColor: isHome ? colors.primary : colors.secundary }]}>
+            <MaterialIcons name="alarm" size={32} color="#fff" />
+            
             <Text style={style.colorText}>Pomodoro</Text>
           </View>
         </TouchableOpacity>

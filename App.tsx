@@ -5,13 +5,13 @@ import TopMenu from "./src/components/TopMenu";
 import HomeScreen from "./src/screens/HomeScreen/HomeScreen";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
+import Routes from "./src/routes/index.routes";
 
 export default function App() {
   return (
     <SafeAreaProvider>
       <StatusBar style="auto"/>
-      <HomeScreen />
-      
+      <Routes/>
     </SafeAreaProvider>
   );
 }

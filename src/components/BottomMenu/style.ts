@@ -20,9 +20,13 @@ export const style = StyleSheet.create({
     width: 70,
   },
   selectedIconBackground: {
+    
+    flexDirection: "column",
+    alignItems: "center",
     borderRadius: 16,      
-    paddingHorizontal: 12,
+    paddingHorizontal: 4,
     paddingVertical: 6,
+    gap:6,
   },
   addIconFrame: {
     width: 57,
@@ -39,6 +43,6 @@ export const style = StyleSheet.create({
   },
   colorText: {
     color: "#fff",
-    fontSize: 11,
+    fontSize: 10,
   },
 });

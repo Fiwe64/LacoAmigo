@@ -12,29 +12,55 @@ interface LembreteProps {
   date: string;
 }
 
-function Lembrete({ titulo,descricao, nomeAmigo, urgency, date }: LembreteProps) {
-  
-  const urgencyColorBackground = () =>  urgency===1 ? colors.commom : urgency === 2 ? colors.important : urgency === 3 ? colors.urgent : colors.commom;
+function Lembrete({
+  titulo,
+  descricao,
+  nomeAmigo,
+  urgency,
+  date,
+}: LembreteProps) {
+  const urgencyColorBackground = () =>
+    urgency === 1
+      ? colors.commom
+      : urgency === 2
+        ? colors.important
+        : urgency === 3
+          ? colors.urgent
+          : colors.commom;
 
-  return (<View style={style.container}>
-      <View style={[style.urgencyColor,{backgroundColor: urgencyColorBackground()}]}>
-
-      </View>
-      <View style={[style.informationBox,{justifyContent:descricao? "center" : "flex-start"}   
-      ]}>
+  return (
+    <View style={style.container}>
+      <View
+        style={[
+          style.urgencyColor,
+          { backgroundColor: urgencyColorBackground() },
+        ]}
+      ></View>
+      <View
+        style={[
+          style.informationBox,
+          { justifyContent: descricao ? "center" : "flex-start" },
+        ]}
+      >
         <Text style={style.titulo}>{titulo}</Text>
         {descricao && <Text style={style.descricao}>{descricao}</Text>}
       </View>
-       <View style={style.timeInformationBox}>
+      {nomeAmigo && 
+      <View style={style.timeInformationBox}>
+        <Text style={style.dataLabel}>Criado Por</Text>
+        <View style={style.friendNameInformationContainer}>
+          <Text style={{fontSize:11}}>{nomeAmigo}</Text>
+        </View>    
+      </View>}
+      <View style={style.timeInformationBox}>
         <Text style={style.dataLabel}>Data Limite</Text>
         <View style={style.badge}>
           <Text style={style.badgeText}>{date}</Text>
         </View>
-       </View>
+      </View>
       <View style={style.botao}>
         <Text style={style.botaoText}>...</Text>
       </View>
-     
     </View>
   );
 }

@@ -68,4 +68,11 @@ export const style = StyleSheet.create({
     color: "#263238",
     letterSpacing: 2,
   },
+
+  friendNameInformationContainer:{
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 2,
+    paddingHorizontal: 10,
+  }
 });

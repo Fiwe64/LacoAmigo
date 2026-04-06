@@ -48,6 +48,7 @@ const style = StyleSheet.create({
     borderRadius: 8,
     flexDirection: 'row', // Ícone ao lado do texto
     gap: 8,
+    width: '45%', // Ocupa menos espaço para dar um ar mais leve
     
     // Sombra suave
     elevation: 5,

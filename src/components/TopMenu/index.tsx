@@ -8,6 +8,7 @@ import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 
 const TopMenu = ({state, navigation}: BottomTabBarProps) => {
   
+  //NAO TIRA ESSE IF DE JEITO, ELE É IMPORTANTE PARA EVITAR ERROS DE NAVEGAÇÃO QUANDO O COMPONENTE FOR RENDERIZADO ANTES DO ESTADO ESTAR PRONTO
   if (!state) return null;
   
   return (
@@ -22,11 +23,11 @@ const TopMenu = ({state, navigation}: BottomTabBarProps) => {
       </View>
 
       <View style={style.tabsContainer}>
-        <TouchableOpacity style={style.tabButtonActive} onPress={() => navigation.navigate("HomeScreen")}>
+        <TouchableOpacity style={state.index===0 ? style.tabButtonActive : style.tabButtonInactive} onPress={() => navigation.navigate("HomeScreen")}>
           <MaterialIcons name="person" size={20} color="#fff" />
           <Text style={state.index === 0 ? style.tabTextActive : {}}>Meus Lembretes</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={style.tabButtonInactive} onPress={() => navigation.navigate("FriendScreen")}>
+        <TouchableOpacity style={state.index===1 ? style.tabButtonActive : style.tabButtonInactive} onPress={() => navigation.navigate("FriendScreen")}>
           <MaterialIcons name="person" size={20} color="#1E1E1E" />
           <Text style={state.index === 1 ? style.tabTextActive : {}}>Amigos</Text>
         </TouchableOpacity>

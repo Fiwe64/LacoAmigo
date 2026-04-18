@@ -1,17 +1,19 @@
-import { StyleSheet, View } from "react-native";
-import Lembrete from "./src/components/lembrete";
-import BottomMenu from "./src/components/BottomMenu";
-import TopMenu from "./src/components/TopMenu";
-import HomeScreen from "./src/screens/HomeScreen/HomeScreen";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import Routes from "./src/routes/index.routes";
+import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { ModalTarefas } from "./src/components/ModalTarefa";
+import { LembreteProvider } from "./src/contexts/ReminderContext";
 
 export default function App() {
   return (
-    <SafeAreaProvider>
-      <StatusBar style="auto"/>
-      <Routes/>
-    </SafeAreaProvider>
+    <LembreteProvider>
+      <SafeAreaProvider>
+        <StatusBar style="auto" />
+        <Routes />
+        <ModalTarefas/>
+      </SafeAreaProvider>
+    </LembreteProvider>
   );
 }

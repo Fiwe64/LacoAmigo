@@ -4,15 +4,16 @@ import style from "./style";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 
 const TopMenu = ({state, navigation}: BottomTabBarProps) => {
-  
+  const insets = useSafeAreaInsets();
   //NAO TIRA ESSE IF DE JEITO, ELE É IMPORTANTE PARA EVITAR ERROS DE NAVEGAÇÃO QUANDO O COMPONENTE FOR RENDERIZADO ANTES DO ESTADO ESTAR PRONTO
   if (!state) return null;
   
   return (
-    <View style={style.container}>
+    <View style={[style.container, { paddingTop: insets.top }]}>
       {/* 1. Parte de Cima: Título e Menu Icone */}
       <View style={style.header}>
         <Text style={style.headerTitle}>Não se Esqueça</Text>

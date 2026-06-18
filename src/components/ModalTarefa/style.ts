@@ -14,6 +14,9 @@ export const style = StyleSheet.create({
         paddingVertical:20,
         paddingHorizontal:10,
         backgroundColor: colors.background,
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
+
     },
     buttonsBox:{
         alignItems:"flex-start",

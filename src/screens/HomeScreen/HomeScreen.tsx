@@ -1,23 +1,29 @@
-import { View, Text } from "react-native";
+import { View, Text, FlatList } from "react-native";
 import React from "react";
 import Lembrete from "../../components/lembrete/index";
-
-import BottomMenu from "../../components/BottomMenu";
 import style from "./style";
+import { useLembrete } from "../../contexts/ReminderContext";
 
 const HomeScreen = () => {
+  const { lembretes } = useLembrete();
   return (
     <View style={style.container}>
-      {/* <View style={style.header}>
-        <TopMenu/>
-      </View> */}
       <View style={style.body}>
-        <Lembrete titulo="Teste" descricao="Testeeeee" urgency={1} date="hoje"/>
-        <Lembrete titulo="Teste" descricao="Testeeeee" urgency={1} date="hoje"/>
+        <FlatList
+          data={lembretes}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => (
+            <Lembrete
+              titulo={item.title} 
+              descricao={item.description} 
+              date={item.date ?? ""} 
+              urgency={
+                item.flag === "urgent" ? 3 : item.flag === "important" ? 2 : 1
+              } 
+            />
+          )}
+        />
       </View>
-      {/* <View style={style.footer}>
-        <BottomMenu/>
-      </View> */}
     </View>
   );
 };

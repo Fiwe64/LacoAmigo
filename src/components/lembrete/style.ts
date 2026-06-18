@@ -6,17 +6,16 @@ export const style = StyleSheet.create({
     width: "100%",
     borderRadius: 24,
     flexDirection: "row",
-     backgroundColor: "white",
+    backgroundColor: "white",
     alignItems: "stretch", //faz os filhos terem a mesma altura.
     overflow: "hidden", // ← isso faz o container recortar os filhos
-   // sombra
+    marginVertical: 5,
+    // sombra
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 3,
-
-   
   },
   urgencyColor: {
     width: 25,
